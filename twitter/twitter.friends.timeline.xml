@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created by: Arie Murdianto
+Date: 17 July 2009
+-->
+<table xmlns="http://query.yahooapis.com/v1/schema/table.xsd" https="true">
+	<meta>
+		<author>Arie Murdianto</author>
+		<documentationURL>http://apiwiki.twitter.com/Twitter-REST-API-Method%3A-statuses-friends_timeline</documentationURL>
+		<sampleQuery>select * from {table} where username="twitterusername" and password="twitterpassword" and </sampleQuery>
+	<meta>
+	<bindings>
+		<select produces="JSON">
+			<urls>
+				<url>http://twitter.com/statuses/friends_timeline.json</url>
+			</urls>
+			<inputs>
+				<key id="since_id" value="integer" required="false"/>
+				<key id="max_id" value="integer" required="false"/>
+				<key id="count" value="integer" required="false"/>
+				<key id="page" value="integer" required="false"/>
+			</inputs>
+			<execute><![CDATA[
+      y.include("http://github.com/ariemurdianto/yql-tables/raw/f6b01bf484004d2278ae86fa1c6ad8cb0a8bd6e3/js/base64.js");
+      var authheader = "Basic "+Base64.encode(username+":"+password);
+      response.object =
+request.header("Authorization",authheader).del().response;
+      ]]>
+			</execute>
+		</select>
+	</bindings>
