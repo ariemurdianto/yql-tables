@@ -9,7 +9,7 @@ for other people. Hence, I upload it to the repository
 		<sampleQuery>select * from {table} where id="2108869549" and username="twitterusernamehere" and password="twitterpasswordhere"</sampleQuery>
 	</meta>
 	<bindings>
-		<select produces="JSON">
+		<select itemPath="" produces="JSON">
 			<urls>
 				<url>http://twitter.com/statuses/show/{id}.xml</url>
 			</urls>
