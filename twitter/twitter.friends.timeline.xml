@@ -15,12 +15,12 @@ Date: 17 July 2009
 				<url>http://twitter.com/statuses/friends_timeline.json</url>
 			</urls>
 			<inputs>
-				<key id="username" value="string" required="true" paramType="variable"/>
-				<key id="password" value="string" required="true" paramType="variable"/>
-				<key id="since_id" value="integer" required="false"/>
-				<key id="max_id" value="integer" required="false"/>
-				<key id="count" value="integer" required="false"/>
-				<key id="page" value="integer" required="false"/>
+				<key id="username" type="string" required="true" paramType="variable"/>
+				<key id="password" type="string" required="true" paramType="variable"/>
+				<key id="since_id" type="integer" required="false" paramType="query"/>
+				<key id="max_id" type="integer" required="false" paramType="query"/>
+				<key id="count" type="integer" required="false" paramType="query"/>
+				<key id="page" type="integer" required="false" paramType="query"/>
 			</inputs>
 			<execute><![CDATA[
       y.include("http://github.com/ariemurdianto/yql-tables/raw/f6b01bf484004d2278ae86fa1c6ad8cb0a8bd6e3/js/base64.js");
