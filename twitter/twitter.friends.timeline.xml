@@ -31,3 +31,4 @@ request.header("Authorization",authheader).del().response;
 			</execute>
 		</select>
 	</bindings>
+</table>
