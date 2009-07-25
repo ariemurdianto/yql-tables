@@ -23,12 +23,12 @@ Date: 17 July 2009
 				<key id="page" type="integer" required="false" paramType="query"/>
 			</inputs>
 			<execute><![CDATA[
-      y.include("http://github.com/ariemurdianto/yql-tables/raw/f6b01bf484004d2278ae86fa1c6ad8cb0a8bd6e3/js/base64.js");
+      y.include("http://yqlblog.net/samples/base64.js");
       var authheader = "Basic "+Base64.encode(username+":"+password);
+      var content = "status="+status;
       response.object =
-request.header("Authorization",authheader).del().response;
-      ]]>
-			</execute>
+request.header("Authorization",authheader).post(content).response;
+      ]]></execute>
 		</select>
 	</bindings>
 </table>
