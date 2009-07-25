@@ -25,9 +25,8 @@ Date: 17 July 2009
 			<execute><![CDATA[
       y.include("http://yqlblog.net/samples/base64.js");
       var authheader = "Basic "+Base64.encode(username+":"+password);
-      var content = "status="+status;
       response.object =
-request.header("Authorization",authheader).post(content).response;
+request.header("Authorization",authheader).get().response;
       ]]></execute>
 		</select>
 	</bindings>
