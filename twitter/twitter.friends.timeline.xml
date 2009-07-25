@@ -10,7 +10,7 @@ Date: 17 July 2009
 		<sampleQuery>select * from {table} where username="twitterusername" and password="twitterpassword" and </sampleQuery>
 	</meta>
 	<bindings>
-		<select produces="JSON">
+		<select produces="JSON" itemPath="">
 			<urls>
 				<url>http://twitter.com/statuses/friends_timeline.json</url>
 			</urls>
